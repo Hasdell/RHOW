@@ -1,5 +1,6 @@
 #pragma once
 #include <Windows.h>
+#include <vector>
 #include "Point.h"
 #include "IPathFindingAlgorithm.h"
 
@@ -19,6 +20,7 @@ public:
 
 	inline const Point& GetPosition() { return mCurrentPosition; }
 private:
+	UINT8 mTextColor;
 	Point mCurrentPosition;
 	IPathFindingAlgorithm* mPathFindingAlgorithm;
 	TCHAR mDrawText[2];

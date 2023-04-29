@@ -16,11 +16,11 @@ MazeMap::MazeMap() : mExitPoint(0, 1)
 
 void MazeMap::Draw()
 {
-	ConsoleProgramScreenManager& screen = ConsoleProgramScreenManager::GetInstance();
+	ConsoleProgramScreenManager& Screen = ConsoleProgramScreenManager::GetInstance();
 
-	for (int y = 0; y < Maze_Size / 2; y++)
+	for (int y = 0; y < Maze_Size_Y; y++)
 	{
-		for (int x = 0; x < Maze_Size; x++)
+		for (int x = 0; x < Maze_Size_X; x++)
 		{
 			if (mMap[y][x])
 			{
@@ -30,7 +30,9 @@ void MazeMap::Draw()
 			{
 				lstrcpy(mDrawText, TEXT(" "));
 			}
-			screen.ScreenPrinting(x * 2, y, mDrawText, 15);
+			Screen.ScreenPrinting(x * 2, y, mDrawText, 15);
+			Screen.ScreenFlipping();
+			Screen.ScreenPrinting(x * 2, y, mDrawText, 15);
 		}
 	}
 }

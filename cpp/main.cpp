@@ -3,5 +3,5 @@
 
 int main()
 {
-	ConsoleProgramMainManager CM(MazePathFindingProgram::GetInstance(), false, 144);
+	ConsoleProgramMainManager CM(MazePathFindingProgram::GetInstance(), true, 144);
 }

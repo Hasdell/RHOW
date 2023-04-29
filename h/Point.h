@@ -3,9 +3,9 @@ class Point
 {
 public:
 	Point(int x, int y) : mX(x), mY(y) {}
-	bool operator == (const Point& anotherPoint)
+	friend bool operator == (const Point& point1, const Point& point2)
 	{
-		if (mX == anotherPoint.mX && mY == anotherPoint.mY)
+		if (point1.mX == point2.mX && point1.mY == point2.mY)
 			return true;
 		return false;
 	}

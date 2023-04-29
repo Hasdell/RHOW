@@ -53,7 +53,7 @@ void ConsoleProgramScreenManager::ScreenFlipping()
 	mScreenBufferIndex = !mScreenBufferIndex;
 }
 
-void ConsoleProgramScreenManager::ScreenPrinting(UINT8 x, UINT8 y, TCHAR* print, int color)
+void ConsoleProgramScreenManager::ScreenPrinting(UINT8 x, UINT8 y, const TCHAR* print, int color)
 {
 	DWORD dw;
 	COORD cursorPosition = { x, y };

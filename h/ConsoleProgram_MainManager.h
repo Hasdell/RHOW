@@ -4,7 +4,7 @@ class IConsoleProgramBase;
 class ConsoleProgramMainManager
 {
 public:
-	ConsoleProgramMainManager(IConsoleProgramBase& consoleProgram, bool bprogramRuntimeCheck, int fps);
+	ConsoleProgramMainManager(IConsoleProgramBase& consoleProgram, const bool bprogramRuntimeCheck, const int fps);
 	~ConsoleProgramMainManager();
 };
 
